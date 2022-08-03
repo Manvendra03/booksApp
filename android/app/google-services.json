@@ -1,0 +1,129 @@
+{
+  "project_info": {
+    "project_number": "237405059009",
+    "project_id": "the-notary-app",
+    "storage_bucket": "the-notary-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237405059009:android:ff0859abecc86d49dca140",
+        "android_client_info": {
+          "package_name": "com.example.notary_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237405059009-vuuo49ojce2kqva36eh8t7vnf2tn0i3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUWOfX4C_xIdYH0uT1EXEmd4VBER-kyTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237405059009-vuuo49ojce2kqva36eh8t7vnf2tn0i3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237405059009:android:082c61596fcce193dca140",
+        "android_client_info": {
+          "package_name": "com.notarizedDocs.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237405059009-d4072jm7ve5qdqsjr137851flj7uudac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.notarizedDocs.app",
+            "certificate_hash": "454261f1296fbaf05a6f54b887d059c446b79f29"
+          }
+        },
+        {
+          "client_id": "237405059009-unnqp5u6f7mla61i4o0gfm7mlh4hrufj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.notarizedDocs.app",
+            "certificate_hash": "75e2be57dd7b91a001faabcb2c490c16af4389e6"
+          }
+        },
+        {
+          "client_id": "237405059009-vuuo49ojce2kqva36eh8t7vnf2tn0i3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUWOfX4C_xIdYH0uT1EXEmd4VBER-kyTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237405059009-vuuo49ojce2kqva36eh8t7vnf2tn0i3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237405059009:android:dd287566726c5e56dca140",
+        "android_client_info": {
+          "package_name": "com.thenotary.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237405059009-3lp6rveeeh291h42fols5k2ngtn5juso.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thenotary.app",
+            "certificate_hash": "1fc048d2cabe14063d12cd4626bc31187485bd7b"
+          }
+        },
+        {
+          "client_id": "237405059009-e31g5viosrjq5n2osdkarvcmg9kg18dr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thenotary.app",
+            "certificate_hash": "454261f1296fbaf05a6f54b887d059c446b79f29"
+          }
+        },
+        {
+          "client_id": "237405059009-vuuo49ojce2kqva36eh8t7vnf2tn0i3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUWOfX4C_xIdYH0uT1EXEmd4VBER-kyTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237405059009-vuuo49ojce2kqva36eh8t7vnf2tn0i3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

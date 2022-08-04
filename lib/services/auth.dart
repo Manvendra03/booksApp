@@ -23,26 +23,26 @@ class AuthService {
 
       final User currentUSer = await _auth.currentUser!;
       final String tokenId = await currentUSer.getIdToken();
-      final String token = tokenId.toString();
+      final String bearerToken = tokenId.toString();
 
       String? pushToken = await FirebaseMessaging.instance.getToken();
       print('push token is here : ' + pushToken.toString());
       pref.setString('pushToken', pushToken!);
 
       print(' email ' + currentUSer.email.toString());
-      // print(token);
+      print('bearer TOken ' + bearerToken);
       print(currentUSer.uid);
 
       http.Response login_response = await http.post(Uri.parse(login_url),
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Authorization': 'Bearer $token',
+            'Authorization': 'Bearer $bearerToken',
           },
           body: jsonEncode({
             'email': currentUSer.email.toString(),
             'uid': currentUSer.uid.toString(),
-            'pushToken': token.toString(),
+            'pushToken': pushToken.toString(),
             'fromMobile': true
           }));
 
@@ -99,46 +99,9 @@ class AuthService {
     }
   }
 
-  static Future<void> hitApi(String pushToken, String apptId) async {
-    String url =
-        "https://notaryapp-staging.herokuapp.com/sendPushMock?token=$pushToken&aptId=$apptId";
-    try {
-      var response = await http.get(Uri.parse(url));
-      print(response.statusCode);
-    } catch (e) {
-      print("catch");
-      print(e);
-    }
+  static Future<String> getPushToken() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String token = await preferences.getString('pushToken')!;
+    return token;
   }
-
-  // Future<void> saveTokenToDatabase(String token) async {
-  //   // Assume user is logged in for this example
-  //   String userId = FirebaseAuth.instance.currentUser!.uid;
-
-  //   final tokenRef = FirebaseFirestore.instance
-  //       .collection('vendors')
-  //       .doc(userId)
-  //       .collection('tokens')
-  //       .doc(token);
-  //   await tokenRef.set(
-  //       TokenModel(token: token, creadtedAt: FieldValue.serverTimestamp())
-  //           .toJson());
-  // }
-
-  // // @override
-  // // void initState() {
-  // //   getToken();
-  // //   super.initState();
-  // // }
-
-  // getToken() async {
-  //   // Get the token each time the application loads
-  //   String? token = await FirebaseMessaging.instance.getToken();
-
-  //   // Save the initial token to the database
-  //   await saveTokenToDatabase(token!);
-
-  //   // Any time the token refreshes, store this in the database too.
-  //   FirebaseMessaging.instance.onTokenRefresh.listen(saveTokenToDatabase);
-  // }
 }

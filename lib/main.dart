@@ -101,7 +101,7 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      // home: LoginPage(),
       debugShowCheckedModeBanner: false,
       theme: lightThemeData,
       onGenerateRoute: (routeSettings) {
@@ -111,11 +111,10 @@ class _MyAppState extends State<MyApp> {
           case 'login':
             return MaterialPageRoute(builder: (context) => LoginPage());
           default:
-            return MaterialPageRoute(builder: (context) => NoInternetPage());
+            return MaterialPageRoute(builder: (context) => LoginPage());
         }
       },
       navigatorKey: navigatorKey,
-      initialRoute: '/dashboard_page_routes',
       routes: {
         '/login_page_route': (context) => LoginPage(),
         '/error_page_route': (context) => NoInternetPage(),
@@ -127,11 +126,13 @@ class _MyAppState extends State<MyApp> {
 
 Future<void> checkNetwork() async {
   var connectivityResult = await (Connectivity().checkConnectivity());
+
   if (connectivityResult == ConnectivityResult.mobile) {
-    navigatorKey.currentState?.pop();
+    // navigatorKey.currentState?.pop();
+
     print('Mobile Network ');
   } else if (connectivityResult == ConnectivityResult.wifi) {
-    navigatorKey.currentState?.pop();
+    // navigatorKey.currentState?.pop();
     print('Wifi Network');
   } else {
     navigatorKey.currentState?.pushNamed('error');
